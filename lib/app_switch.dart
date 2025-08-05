@@ -41,13 +41,17 @@ class _AppSwitchState extends State<AppSwitch>
       vsync: this,
       duration: const Duration(milliseconds: 60),
     );
-    _circleAnimation = AlignmentTween(
-      begin:
-          widget.initSwitched! ? Alignment.centerRight : Alignment.centerLeft,
-      end: widget.initSwitched! ? Alignment.centerLeft : Alignment.centerRight,
-    ).animate(
-      CurvedAnimation(parent: _animationController, curve: Curves.linear),
-    );
+    _circleAnimation =
+        AlignmentTween(
+          begin: widget.initSwitched!
+              ? Alignment.centerRight
+              : Alignment.centerLeft,
+          end: widget.initSwitched!
+              ? Alignment.centerLeft
+              : Alignment.centerRight,
+        ).animate(
+          CurvedAnimation(parent: _animationController, curve: Curves.linear),
+        );
   }
 
   @override
@@ -71,10 +75,9 @@ class _AppSwitchState extends State<AppSwitch>
           child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20.0),
-              color:
-                  _circleAnimation.value == Alignment.centerLeft
-                      ? widget.deActiveColor ?? Colors.blueGrey[300]
-                      : widget.activeColor ?? Colors.green,
+              color: _circleAnimation.value == Alignment.centerLeft
+                  ? widget.deActiveColor ?? Colors.blueGrey[300]
+                  : widget.activeColor ?? Colors.green,
             ),
             child: Padding(
               padding: const EdgeInsets.only(
@@ -91,10 +94,10 @@ class _AppSwitchState extends State<AppSwitch>
                       padding: const EdgeInsets.symmetric(horizontal: 8.0),
                       child: Text(
                         widget.activeTxt!,
-                         style: theme.textTheme.titleSmall?.copyWith(
-                             color: widget.activeTxtColor ?? Colors.white,
-                           ),
-                          // style: AppTxtStyles.kSmallTitleTextStyle.copyWith(
+                        style: theme.textTheme.titleSmall?.copyWith(
+                          color: widget.activeTxtColor ?? Colors.white,
+                        ),
+                        // style: AppTxtStyles.kSmallTitleTextStyle.copyWith(
                         //   color: widget.activeTxtColor ?? Colors.white,
                         // ),
                       ),

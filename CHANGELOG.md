@@ -1,10 +1,20 @@
-
 # Changelog
 
 All notable changes to this project will be documented in this file.
 
+## 0.0.2
+
+### Aug 22, 2025
+
+### ✨ Updated
+
+- Updated Dart sdk to 3.9.0
+- Removed `flutter_lints` Dependency
+
 ## 0.0.1
+
 ### Added
+
 - Initial release of `reusable_switch_btn`.
 - Introduced three main widgets:
     - `AppSwitch`: A customizable, animated switch with text labels.

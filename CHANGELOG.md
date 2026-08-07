@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.0.3
+
+### Aug 7, 2026
+
+### ✨ Fix
+
+- Fixed `AppSwitch` widget with null-coalescing fallbacks to prevent UnexpectedNullError crashes when processing optional parameters.
+
+
 ## 0.0.2
 
 ### Aug 22, 2025

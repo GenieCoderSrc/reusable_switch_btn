@@ -12,8 +12,8 @@ class AppSwitch extends StatefulWidget {
 
   const AppSwitch({
     super.key,
-    this.activeTxt = 'ON',
-    this.disableTxt = 'OFF',
+    this.activeTxt,
+    this.disableTxt,
     this.initSwitched = false,
     this.onChanged,
     this.activeColor,
@@ -43,12 +43,8 @@ class _AppSwitchState extends State<AppSwitch>
     );
     _circleAnimation =
         AlignmentTween(
-          begin: widget.initSwitched!
-              ? Alignment.centerRight
-              : Alignment.centerLeft,
-          end: widget.initSwitched!
-              ? Alignment.centerLeft
-              : Alignment.centerRight,
+          begin: isSwitch ? Alignment.centerRight : Alignment.centerLeft,
+          end: isSwitch ? Alignment.centerLeft : Alignment.centerRight,
         ).animate(
           CurvedAnimation(parent: _animationController, curve: Curves.linear),
         );
@@ -93,7 +89,7 @@ class _AppSwitchState extends State<AppSwitch>
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 8.0),
                       child: Text(
-                        widget.activeTxt!,
+                        widget.activeTxt ?? 'ON',
                         style: theme.textTheme.titleSmall?.copyWith(
                           color: widget.activeTxtColor ?? Colors.white,
                         ),
@@ -119,7 +115,7 @@ class _AppSwitchState extends State<AppSwitch>
                     Padding(
                       padding: const EdgeInsets.only(left: 4.0, right: 5.0),
                       child: Text(
-                        widget.disableTxt!,
+                        widget.disableTxt ?? 'OFF',
                         style: const TextStyle(
                           color: Colors.white70,
                           fontWeight: FontWeight.w900,

@@ -20,6 +20,8 @@ Easily control user toggles with elegant design and smooth animations.
 Add this to your `pubspec.yaml`:
 
 ```yaml
+resolution: workspace
+
 dependencies:
   reusable_switch_btn: <latest_version>
 ```

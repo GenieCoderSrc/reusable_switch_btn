@@ -36,8 +36,7 @@ class AppSwitchCard extends StatelessWidget {
     return Card(
       margin: const EdgeInsets.all(8.0),
       child: Padding(
-        padding:
-            padding ??
+        padding: padding ??
             const EdgeInsets.symmetric(horizontal: 10.0, vertical: 15.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -41,13 +41,12 @@ class _AppSwitchState extends State<AppSwitch>
       vsync: this,
       duration: const Duration(milliseconds: 60),
     );
-    _circleAnimation =
-        AlignmentTween(
-          begin: isSwitch ? Alignment.centerRight : Alignment.centerLeft,
-          end: isSwitch ? Alignment.centerLeft : Alignment.centerRight,
-        ).animate(
-          CurvedAnimation(parent: _animationController, curve: Curves.linear),
-        );
+    _circleAnimation = AlignmentTween(
+      begin: isSwitch ? Alignment.centerRight : Alignment.centerLeft,
+      end: isSwitch ? Alignment.centerLeft : Alignment.centerRight,
+    ).animate(
+      CurvedAnimation(parent: _animationController, curve: Curves.linear),
+    );
   }
 
   @override
